@@ -1,29 +1,21 @@
 import React from 'react';
-import { Draggable } from '@hello-pangea/dnd';
 
-const Sidebar = ({ components }) => {
+const Sidebar = ({ components, onAddComponent }) => {
   return (
-    <div className="sidebar">
-      <h3 className="font-bold mb-2">Components</h3>
-      {components.map((component, index) => (
-        <Draggable 
-          key={`${component.type}-${index}`}
-          draggableId={`${component.type}-${index}`} 
-          index={index}
-        >
-          {(provided) => (
-            <div
-              ref={provided.innerRef}
-              {...provided.draggableProps}
-              {...provided.dragHandleProps}
-              className="draggable-item p-2 border border-gray-200 rounded mb-2 cursor-pointer bg-white shadow-sm hover:bg-gray-100 transition duration-200"
-              aria-label={`Drag ${component.label}`}
+    <div>
+      <h2 className="font-bold text-xl mb-4">Components</h2>
+      <ul>
+        {components.map((component, index) => (
+          <li key={index}>
+            <button
+              className="w-full text-left bg-blue-100 hover:bg-blue-200 px-2 py-1 rounded mb-1"
+              onClick={() => onAddComponent(index)}
             >
               {component.label}
-            </div>
-          )}
-        </Draggable>
-      ))}
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

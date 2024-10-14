@@ -1,0 +1,15 @@
+.draggable-component {
+  transition: transform 0.2s;
+}
+
+.draggable-component:hover {
+  transform: scale(1.05);
+}
+
+.sidebar-container {
+  /* This is handled by Tailwind now, but you can add more styles if needed */
+}
+
+.footer {
+  background-color: #d1d5db; /* Light gray */
+}

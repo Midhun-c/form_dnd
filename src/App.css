@@ -1,18 +1,4 @@
-.App {
-  text-align: center;
-}
-.app-container {
-  display: flex; /* Use flexbox for layout */
-  height: 100vh; /* Full height */
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.sidebar-container {
-  width: 250px; /* Fixed width for sidebar */
-  border-right: 1px solid #ccc; /* Optional border for separation */
-  padding: 10px; /* Optional padding */
-}
-
-.droparea-container {
-  flex-grow: 1; /* Allow drop area to take remaining space */
-  padding: 10px; /* Optional padding */
-}
